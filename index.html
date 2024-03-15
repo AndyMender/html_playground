@@ -3,12 +3,21 @@
     <head>
         <title>Example article about brown bears</title>
         <!-- metadata blocks always go into the 'head' block -->
+        <meta charset="UTF-8" />
         <meta http-equiv="refresh" content="30" />
+        <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+        <!-- Scaling for mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
         <a href="./index.html">Brown Bear</a>
         <a href="./aboutme.html">About Me</a>
         <h1>The Brown Bear</h1>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#habitat">Habitat</a></li>
+            <li><a href="#media">Media</a></li>
+        </ul>
         <div id="introduction">
         <h2>About Brown Bears</h2>
         <p>
@@ -54,7 +63,7 @@
         <h2>Media</h2>
         <!-- Without specifying protocols assumes local file, but URLs, etc. are also permitted -->
         <!-- NOTE: The 'alt' block helps visually impaired people, but also provides an image tag for search engines -->
-        <img src="./bear-teekyuu.jpg" alt="A picture of a smoking bear" />
+        <a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank"><img src="./bear-teekyuu.jpg" alt="A picture of a smoking bear" /></a>
         <video src="https://content.codecademy.com/courses/freelance-1/unit-1/lesson-2/htmlcss1-vid_brown-bear.mp4" width="320" height="240" controls>
             Video not supported
         </video>

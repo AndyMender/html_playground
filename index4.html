@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="refresh" content="60" />
+        <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+        <!-- Scaling for mobile devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Number Guessing</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
+    </head>
+    <body>
+        <script src="./index4.js"></script>
+        <!-- Instead of calling an 'action' one can use 'onsubmit' to invoke nested Javascript code.
+             The attribute in individual 'input' blocks is called 'onclick' -->
+        <!-- NOTE: The 'onsubmit' attribute can be used to implement more extensive client-side form's field validation -->
+        <form action="#" onsubmit="return validateFormOnSubmit(this)" method="get">
+            <label for="guess">Enter a number between 1-10:</label>
+            <br>
+            <!-- Just like 'range', the 'number' input can have a min and max value -->
+            <input type="number" name="guess" id="guess" min="1" max="10" required>
+            <br>
+            <label for="username">Username:</label>
+            <br>
+            <!-- 'pattern' allows setting a regex to validate an input client-side -->
+            <input id="username" name="username" type="text" minlength="3" maxlength="15" pattern="[a-zA-Z0-9]+" required>
+            <br>
+            <label for="pw">Password:</label>
+            <br>
+            <input id="password" name="password" type="password" minlength="8" maxlength="15" required>
+            <br>
+            <input type="submit" id="submission" value="Submit">
+        </form>
+    </body>
+    <footer>
+    </footer>
+</html>

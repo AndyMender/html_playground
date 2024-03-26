@@ -3,6 +3,7 @@
     <head>
         <title>Vacation World</title>
         <!-- Applies CSS to all matching block in the HTML template. However, exposed to client-side! -->
+        <!-- NOTE: Best practice is to use CSS class with increasing specificity as needed -->
         <style>
             * {
                 font-family: Verdana;
@@ -26,6 +27,7 @@
                 text-transform: uppercase;
             }
 
+            /* Targets an element with 'id="article-title"' and overrides other styles. Should be used sparingly! */
             #article-title {
                 font-family: cursive;
             }
@@ -41,6 +43,20 @@
 
             a[href*='seoul'] {
                 color: lightpink;
+            }
+
+            /* Targets the 'hover' pseudo-class of 'a' blocks when they're highlighted with the cursor. Works with other pseudo-classes, too. */
+            a:hover {
+                color: darkorange;
+            }
+
+            .heading-background {
+                background-color: aqua;
+            }
+
+            /* It's possible to use multiple selectors in CSS */
+            h2.destination {
+                font-family: Tahoma;
             }
         </style>
         <!-- href - same as 'src' in 'img' blocks, rel - relationship -->
@@ -58,7 +74,7 @@
             and experiencing something new.
         </p>
 
-        <h2 class='destination'>1. Florence, Italy</h2>
+        <h2 class='destination heading-background'>1. Florence, Italy</h2>
         <div class='description'>
             A city-size shrine to the Renaissance, Florence offers frescoes, sculptures, churches, palaces, and other
             monuments from the richest cultural flowering the world has known. Names from its dazzling historical past;
@@ -66,35 +82,45 @@
             <a href='https://www.nationalgeographic.com/travel/destination/florence' target='_blank'>Learn More</a>.
             <h5>Top Attractions</h5>
             <ul>
-            <li>Museums</li>
-            <li>Bike Tours</li>
-            <li>Historical Monuments</li>
+                <li>Museums</li>
+                <li>Bike Tours</li>
+                <li>Historical Monuments</li>
             </ul>
         </div>
 
-        <h2 class='destination'>2. Beijing, China</h2>
-        <div class='description'>A city in the midst of reinventing itself and continuing to build on the success of the 2008 Summer Olympics, Beijing is a place of frenzied construction. New housing, new roads, and new sports venues seem to spring up overnight. At the same time, the capital of the Peoples Republic of China remains an epicenter of tradition, with the treasures of nearly 2,000 years as the imperial capital still on view in the famed Forbidden City and in the luxuriant pavilions and gardens of the Summer Palace.
+        <h2 class='destination heading-background'>2. Beijing, China</h2>
+        <div class='description'>
+            A city in the midst of reinventing itself and continuing to build on the success of the 2008 Summer Olympics,
+            Beijing is a place of frenzied construction. New housing, new roads, and new sports venues seem to spring up overnight.
+            At the same time, the capital of the Peoples Republic of China remains an epicenter of tradition, with the treasures 
+            of nearly 2,000 years as the imperial capital still on view in the famed Forbidden City and in the luxuriant pavilions 
+            and gardens of the Summer Palace.
             <a href='https://www.nationalgeographic.com/travel/destination/beijing' target='_blank'>Learn More</a>.
             <h5>Top Attractions</h5>
             <ul>
-            <li>Biking</li>
-            <li>Historical Sites</li>
-            <li>Restaurants and Dining</li>
+                <li>Biking</li>
+                <li>Historical Sites</li>
+                <li>Restaurants and Dining</li>
             </ul>
         </div>
 
-        <h2 class='destination'>3. Seoul, South Korea</h2>
-        <div class='description'>The Korean capital is a city of contrasts. Fourteenth-century city gates squat in the shadow of 21st-century skyscrapers, while the broad Han River is back-dropped by granite mountains rising in the city center complete with alpine highways speeding around their contours and temples nestling among their crags. Fashionable, gadget-laden youths battle for sidewalk space with fortune-tellers and peddlers, while tiny neighborhoods of traditional cottages contrast with endless ranks of identical apartments.
+        <h2 class='destination heading-background'>3. Seoul, South Korea</h2>
+        <div class='description'>
+            The Korean capital is a city of contrasts. Fourteenth-century city gates squat in the shadow of 21st-century skyscrapers, 
+            while the broad Han River is back-dropped by granite mountains rising in the city center complete with alpine highways 
+            speeding around their contours and temples nestling among their crags. Fashionable, gadget-laden youths battle for sidewalk 
+            space with fortune-tellers and peddlers, while tiny neighborhoods of traditional cottages contrast with endless ranks of 
+            identical apartments.
             <a href='https://www.nationalgeographic.com/travel/destination/seoul' target='_blank'>Learn More</a>.
             <h5>Top Attractions</h5>
             <ul>
-            <li>Parasailing</li>
-            <li>Segway Tours</li>
-            <li>Spas and Resorts</li>
+                <li>Parasailing</li>
+                <li>Segway Tours</li>
+                <li>Spas and Resorts</li>
             </ul>
         </div>
 
-        <h2> More Destinations </h2>
+        <h2 class='heading-background'> More Destinations </h2>
         <ul>
             <li><h4 class='destination'>Jackson Hole, Wyoming</h4></li>
             <li><h4 class='destination'>Cape Town, South Africa</h4></li>

@@ -1,0 +1,137 @@
+/* NOTE: Setting 'margin' and 'padding' to '0' resets these values in the default browser's stylesheet */
+body {
+    background-color: white;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navigation li {
+    font-weight: 100;
+    letter-spacing: 2px;
+    padding: 20px;
+}
+
+.navigation  li.logo {
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+#banner {
+    background-image: url("https://content.codecademy.com/courses/web-101/unit-6/htmlcss1-img_tahoe.jpeg");
+    background-size: cover;
+    background-position: bottom center;
+    height: 700px;
+    width: 100%;
+}
+
+/* 
+    border's
+    - width - size in pixels or any of (thin, medium, thick)
+    - style - any of (solid, dotted, none) where 'none' => no border
+    - color - any color
+*/
+#banner .content h1 {
+    border: medium solid white;
+    border-radius: 15px;
+    position: relative;
+    top: 50px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+#main {
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    width: 400px;
+    height: 1000px;
+    overflow: scroll;
+}
+
+h1 {
+    color: white;
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* NOTE: On neighboring elements, the top-bottom margins collapse and only the bigger of the two is considered */
+h2 {
+    border: 1px dotted red;
+    color: red;
+    font-size: 14px;
+    line-height: 48px;
+    padding: 20px 30px;
+    margin: 30px 20px;
+    text-align: center;
+}
+
+h3 {
+    color: red;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 20px 10px;
+}
+
+/* It's possible to set min and max width and height, but min-width/height might cause text to overflow on mobile devices */
+p {
+    color: grey;
+    font-size: 16px;
+    line-height: 48px;
+    margin-top: 60px;
+    padding: 10px 20px;
+}
+
+.pull-quote {
+    margin: 0 auto;
+    width: 400px;
+}
+
+.byline {
+    border-bottom: 1px solid LightGrey;
+    border-top: 1px solid LightGrey;
+    color: DarkGrey;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.share {
+    border: 1px solid LightGrey;
+    padding: 40px 0px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+/* 
+    'border-radius' adds curviness to border edges
+    NOTE: if the element is a perfect square, a 'border-radius' of 50% will make it into a circle
+
+    'padding' is inserted directly between the text and the border
+    NOTE: if the element has a 'background', that too will be expanded
+*/
+.share a {
+    background: red;
+    border: 1px solid red;
+    border-radius: 3px;
+    color: white;
+    display: inline-block;
+    margin: 10px;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.share a:hover {
+    background: white;
+    border: 1px solid red;    /* 'border' here is not needed, it's inherited from the '.share a' rule */
+    color: red;
+}

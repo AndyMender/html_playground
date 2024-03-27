@@ -3,9 +3,15 @@ body {
     margin: 0 auto;
 }
 
+/*
+    'z-index' defines an artificial Z-axis hierarchy of how elements are rendered in the browser
+*/
 header {
     background-color: #466995;
     border-bottom: 1px solid #466995;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 
 ul {
@@ -14,12 +20,20 @@ ul {
     text-align: center;
 }
 
+/*
+    display
+    - inline - elements like 'strong' and 'em' which are inlined in other elements like 'p'
+    - inline-block - allows elements to align side-by-side without overlapping
+    - block - default, elements align vertically
+*/
 li {
     color: #FFF;
     font-family: 'Oswald', sans-serif;
     font-size: 16px;
     font-weight: 300;
     text-transform: uppercase;
+    display: inline-block;
+    width: 80px;
 }
 
 li:hover {
@@ -59,7 +73,7 @@ h4 {
     font-weight: 300;
     letter-spacing: 2px;
     text-align: center;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 
 p {
@@ -71,23 +85,41 @@ p {
 footer {
     background-color: #DBE9EE;
     text-align: center;
+    height: 100px;
 }
 
+/*
+    position
+    - static - default setting
+    - relative - statically defined via additional fields, relative to the preceding element
+    - absolute - element's position relates only to the whole document
+    - sticky - follows current viewport
+    - fixed - similar to 'sticky', but positions element relative to the whole document
+*/
 .welcome {
     background-color: #DBE9EE;
     box-sizing: border-box;
     padding: 40px;
     text-align: center;
     width: 100%;
+    position: relative;
+    top: 50px;
 }
 
+/*
+    'clear' clears past 'float' element relationship. Here, it doesn't do anything.
+*/
 .question {
     text-align: center;
+    position: relative;
+    top: 40px;
+    clear: left;
 }
 
 .answer {
     border: 1px solid #466995;
     margin: 20px;
+    display: inline-block;
 }
 
 .answer:hover {

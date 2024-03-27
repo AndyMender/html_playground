@@ -63,6 +63,7 @@ p {
     width: 60%;
     color: black;
     background-color: white;
+    opacity: 0.6;
 }
 
 .content {
@@ -70,7 +71,8 @@ p {
 }
 
 .image {
-    background-image: url("https://content.codecademy.com/courses/web-101/unit-4/htmlcss1-img_soccer.jpeg");
+    /* NOTE: Like in all other file sources, 'url' can point to a local image as well */
+    background-image: url("https://content.codecademy.com/courses/freelance-1/unit-2/soccer.jpeg");
     background-size: cover;
     background-position: center;
     height: 300px;

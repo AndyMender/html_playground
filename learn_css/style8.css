@@ -1,6 +1,7 @@
 /* Universal Styles */
 html {
     font-size: 16px;
+    /* if Arial is not available, the browser is going to use the default 'sans-serif' font */
     font-family: 'Arial', sans-serif;
 }
 
@@ -10,10 +11,14 @@ body {
 }
 
 h1 {
+    font-family: Georgia;
     padding: 20px;
     color: white;
     font-size: 28px;
     text-align: center;
+    text-transform: uppercase;
+    /* Spacing between each character in text */
+    letter-spacing: 0.3em;
 }
 
 h2 {
@@ -30,11 +35,13 @@ p {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
+    text-align: justify;
 }
 
 
 /* Header */
 .header {
+    font-weight: 900;
     position: fixed;
     top: 0;
     width: 100%;
@@ -65,6 +72,11 @@ a.home {
 }
 
 .banner p {
+    font-weight: lighter;
+    /* Distance between individual words */
+    word-spacing: 0.25em;
+    /* Distance between lines in text */
+    line-height: 1.4;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     color: #ffffff;
@@ -75,6 +87,7 @@ a.home {
 .editorial {
     padding-bottom: 40px;
     color: #717171;
+    font-family: 'Trebuchet MS', 'Times New Roman', serif;
 }
 
 /* Font Card Sections */
@@ -87,6 +100,7 @@ a.home {
 .font-card .creator {
     padding: 10px 20px;
     font-size: 16px;
+    font-style: italic;
 }
 
 .sample {
@@ -108,7 +122,8 @@ a.home {
 }
 
 .space {
-  
+    /* Requires pulling the font from Google Fonts */
+    font-family: 'Space Mono', monospace;
 }
 
 .bold {
